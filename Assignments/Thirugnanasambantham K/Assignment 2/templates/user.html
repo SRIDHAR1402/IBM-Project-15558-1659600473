@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{title}}
+{% endblock title %}
+{% block content %}
+     <br>
+     <div class="container">
+        <div class="col-md-offset-3 col-md-5">
+            <h2 class="page-header text-primary text-center">User Page</h2>
+            {%if session[username]%}
+            <h3 class="text-success">Welcome {{ session[username] }}</h3>
+            {%else%}
+            <h3 class="text-success">Welcome!</h3>
+            <hr>
+            <a href="{{url_for('logout')}}" class="btn btn-primary btn-block">Logout</a>
+            {%endif%}
+        </div>
+     </div>
+
+{% endblock content %}
