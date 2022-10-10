@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{title}}
+{% endblock title %}
+{% block content %}
+    {% if succ %}
+        <div class="alert alert-success" role="alert">{{ succ }}</div>
+        
+    {% endif %}
+    <div class="text-center fs-3">
+        <br>
+        <img src="/static/images/ironman3.jpg" class="img-fluid" alt="welcome" height="200px" width="300px">
+        <br>
+        <p> <b> Hi, welcome to my site </b>🙋🏽‍♂️</p>
+        <p> <i> Please, take a visit...</i>😀</p>
+    </div>
+{% endblock content %}
